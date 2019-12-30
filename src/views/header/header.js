@@ -10,16 +10,40 @@ export default class BlogHeader extends React.Component {
     super(props);
     this.state = {
       // navigation list
-      list: [],
+      list: [
+        {
+          label: 'Home',
+          href: '/'
+        },
+        {
+          label: 'Articles',
+          href: '/articles'
+        },
+        {
+          label: 'Write',
+          href: '/write'
+        },
+        {
+          label: 'demo',
+          href: '/demo'
+        }
+      ],
       logo: logo
     };
   }
+
   render () {
     return (
       <header className="blog-header">
         <img className="logo" src={logo} alt="logo"/>
-        <ul>
-          <li></li>
+        <ul className="nav">
+          {this.state.list.map((item, idx) => {
+            return (
+              <li key={idx} className="nav-i">
+                {item.label}
+              </li>
+            );
+          })}
         </ul>
       </header>
     );

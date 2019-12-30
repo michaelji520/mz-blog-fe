@@ -1,10 +1,28 @@
+@import '../../common/CustomizeAntD.less';
 .blog-header {
   display: flex;
   align-items: center;
   height: 48px;
-  background: #1890ff;
-  padding: 0 12px;
+  background: @primary-color;
+  padding: 0 12px 0 0;
   .logo {
-    height: calc(~"100% - 20px");
+    height: calc(~"100% - 24px");
+    padding: 0 12px;
+  }
+  .nav {
+    display: flex;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.5);
+    &-i {
+      cursor: pointer;
+      padding: 0 8px;
+      transition: color .2s;
+      &:hover {
+        color: #FFFFFF;
+      }
+      &.active {
+        color: #FFFFFF;
+      }
+    }
   }
 }

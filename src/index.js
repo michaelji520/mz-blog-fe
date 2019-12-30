@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './common/base.less';
+import 'antd/dist/antd.less'; // 引入官方提供的 less 样式入口文件
+import './common/CustomizeAntD.less';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
