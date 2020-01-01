@@ -13,6 +13,7 @@
     display: flex;
     margin: 0;
     color: rgba(255, 255, 255, 0.5);
+    flex: 1;
     &-i {
       cursor: pointer;
       padding: 0 8px;
@@ -22,6 +23,24 @@
       }
       &.active {
         color: #FFFFFF;
+      }
+    }
+  }
+  .search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    input {
+      box-sizing: border-box;
+      border: 1px solid @primary-color;
+      border-radius: 2px;
+      line-height: 28px;
+      height: 28px;
+      padding: 2px 8px;
+      min-width: 200px;
+      &:focus {
+        border: 1px solid #1C73A5;
       }
     }
   }
