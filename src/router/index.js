@@ -1,10 +1,15 @@
+import Home from '../views/home/home';
+import About from '../views/about/about'
 
-const routes = {
-  path: '/',
-  childRoutes: [
-    // { path: 'about', component: About },
-    // { path: 'inbox', component: Inbox },
-  ]
-};
+const routes = [
+  {
+    path: '/index',
+    component: Home
+  },
+  {
+    path: '/about',
+    component: About
+  }
+];
 
 export default routes;
