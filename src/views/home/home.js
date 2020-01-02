@@ -3,7 +3,7 @@ import React from 'react';
 export default class Home extends React.Component {
   render () {
     return (
-      <div>123</div>
+      <div className="blog-content">Here is index.</div>
     );
   }
 }

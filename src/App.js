@@ -9,9 +9,7 @@ import BlogHeader from './views/header/header';
 function App() {
   return (
     <Router>
-      <div className="blog">
-        <BlogHeader></BlogHeader>
-      </div>
+      <BlogHeader></BlogHeader>
       {routers.map((route, idx) => {
         return (
           <Route 
