@@ -9,16 +9,20 @@ import BlogHeader from './views/header/header';
 function App() {
   return (
     <Router>
-      <BlogHeader></BlogHeader>
-      {routers.map((route, idx) => {
-        return (
-          <Route 
-            key={idx}
-            path={route.path} 
-            component={route.component}>
-          </Route>
-        );
-      })}
+      <div className="navigation">
+        <BlogHeader></BlogHeader>
+      </div>
+      <div className="container">
+        {routers.map((route, idx) => {
+          return (
+            <Route 
+              key={idx}
+              path={route.path} 
+              component={route.component}>
+            </Route>
+          );
+        })}
+      </div>
     </Router>
   );
 }
