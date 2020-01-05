@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../../assets/images/brand-white.png';
 import './header.less';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 /**
  * @description blog navigation bar 
@@ -59,7 +59,7 @@ export default class BlogHeader extends React.Component {
           {this.state.list.map((item, idx) => {
             return (
               <li key={idx} className="nav-i">
-                <Link to={item.href}>{item.label}</Link>
+                <NavLink to={item.href}>{item.label}</NavLink>
               </li>
             );
           })}

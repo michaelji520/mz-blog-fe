@@ -6,7 +6,10 @@ export default class Home extends React.Component {
   render () {
     return (
       <div className="homepage">
-        <Profile></Profile>
+        <div className="myself">
+          <Profile></Profile>
+        </div>
+        <div className="recommendations"></div>
       </div>
     );
   }

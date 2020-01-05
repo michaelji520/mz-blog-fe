@@ -14,8 +14,12 @@ export default class Profile extends React.Component {
   render () {
     return (
       <div className="profile">
-        <div className="cover" style={ {background: this.state.cover} }></div>
-        {this.state.name}
+        <div className="cover" style={ {backgroundImage: `url(${this.state.cover})`} }></div>
+        <div className="info">
+          <img className="avatar" src={this.state.avatar} alt="avatar"/>
+          <h2 className="nickname">{this.state.name}</h2>
+          <p className="description">{this.state.description}</p>
+        </div>
       </div>
     );
   }
