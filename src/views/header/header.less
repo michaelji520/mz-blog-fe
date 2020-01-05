@@ -6,8 +6,8 @@
   background: @primary-color;
   padding: 0 12px 0 0;
   .logo {
-    height: calc(~"100% - 24px");
-    padding: 0 12px;
+    height: calc(~"100% - 16px");
+    padding: 0 18px;
   }
   .nav {
     display: flex;
@@ -38,8 +38,10 @@
       line-height: 28px;
       height: 28px;
       padding: 2px 8px;
-      min-width: 200px;
+      transition: width .3s;
+      width: 200px;
       &:focus {
+        width: 320px;
         border: 1px solid #1C73A5;
       }
     }

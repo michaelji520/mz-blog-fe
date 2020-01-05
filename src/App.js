@@ -4,6 +4,7 @@ import './common/CustomizeAntD.less';
 import routers from './router';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import BlogHeader from './views/header/header';
+import Footer from './views/footer/footer';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           );
         })}
       </div>
+      <Footer></Footer>
     </Router>
   );
 }

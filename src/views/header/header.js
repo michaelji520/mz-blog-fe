@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../assets/images/brand-white.png';
+import logo from '../../assets/images/logo_img_sc.png';
 import './header.less';
 import { NavLink } from 'react-router-dom';
 
@@ -25,11 +25,11 @@ export default class BlogHeader extends React.Component {
           href: '/write'
         },
         {
-          label: 'demo',
+          label: 'Demo',
           href: '/demo'
         },
         {
-          label: 'about',
+          label: 'About',
           href: '/about'
         }
       ],
