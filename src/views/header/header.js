@@ -10,29 +10,6 @@ export default class BlogHeader extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      // navigation list
-      list: [
-        {
-          label: 'Home',
-          href: '/index'
-        },
-        {
-          label: 'Articles',
-          href: '/articles'
-        },
-        {
-          label: 'Write',
-          href: '/write'
-        },
-        {
-          label: 'Demo',
-          href: '/demo'
-        },
-        {
-          label: 'About',
-          href: '/about'
-        }
-      ],
       logo: logo
     };
   }
@@ -56,10 +33,10 @@ export default class BlogHeader extends React.Component {
       <header className="blog-header">
         <img className="logo" src={logo} alt="logo"/>
         <ul className="nav">
-          {this.state.list.map((item, idx) => {
+          {this.props.navs.map((item, idx) => {
             return (
               <li key={idx} className="nav-i">
-                <NavLink to={item.href}>{item.label}</NavLink>
+                <NavLink exact to={item.path}>{item.name}</NavLink>
               </li>
             );
           })}

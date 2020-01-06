@@ -11,12 +11,13 @@ function App() {
   return (
     <Router>
       <div className="navigation">
-        <BlogHeader></BlogHeader>
+        <BlogHeader navs={routers}></BlogHeader>
       </div>
       <div className="container">
         {routers.map((route, idx) => {
           return (
             <Route 
+              exact={route.exact}
               key={idx}
               path={route.path} 
               component={route.component}>
