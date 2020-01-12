@@ -1,5 +1,6 @@
 import Home from '../views/home/home';
 import About from '../views/about/about'
+import Write from '../views/write/write'
 
 const routes = [
   {
@@ -14,9 +15,9 @@ const routes = [
     component: About
   },
   {
-    path: '/post',
-    name: 'Post',
-    component: About
+    path: '/write',
+    name: 'Write',
+    component: Write
   },
   {
     path: '/demo',

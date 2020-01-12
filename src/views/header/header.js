@@ -36,13 +36,17 @@ export default class BlogHeader extends React.Component {
           {this.props.navs.map((item, idx) => {
             return (
               <li key={idx} className="nav-i">
-                <NavLink exact to={item.path}>{item.name}</NavLink>
+                <NavLink exact={item.exact} to={item.path}>{item.name}</NavLink>
               </li>
             );
           })}
         </ul>
         <div className="search">
-          <input type="text" onKeyDown={this.handleSearchKeyDown} onChange={this.handleSearchKeywordChange.bind(this)} placeholder="Search articles"/>
+          <input 
+            type="text" 
+            onKeyDown={this.handleSearchKeyDown} 
+            onChange={this.handleSearchKeywordChange.bind(this)} 
+            placeholder="搜索感兴趣的内容"/>
         </div>
       </header>
     );

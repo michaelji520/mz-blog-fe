@@ -1,0 +1,20 @@
+.post {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100%;
+  grid-template-rows: 48px 1fr;
+  .title {
+    padding: 0 16px;
+    font-size: 20px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    box-shadow: 0 0 0 1px #E1E2E3 inset;
+  }
+  .raw, .marked {
+    overflow: auto;
+    padding: 1em;
+  }
+  .raw {
+    resize: none;
+  }
+}
