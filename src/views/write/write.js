@@ -17,6 +17,7 @@ export default class Post extends React.Component {
     if (e.keyCode === 83 && e.ctrlKey) {
       e.stopPropagation();
       e.preventDefault();
+      console.log(this.title.value, this.content.value);
       Service.post(api.saveArticle, {
       });
     }
@@ -30,8 +31,8 @@ export default class Post extends React.Component {
   render () {
     return (
       <div className="post" onKeyDown={this.handlePageKeyDown.bind(this)}>
-        <input className="title" placeholder="输入文章名称"/>
-        <textarea onKeyUp={this.handleEditorKeyUp.bind(this)} className="raw"></textarea>
+        <input className="title" ref={(val) => this.title = val} placeholder="输入文章名称"/>
+        <textarea ref={(val) => this.content = val} onKeyUp={this.handleEditorKeyUp.bind(this)} className="raw"></textarea>
         <div className="marked markdown-body" dangerouslySetInnerHTML={{__html: this.state.markedText}}></div>
       </div>
     );
