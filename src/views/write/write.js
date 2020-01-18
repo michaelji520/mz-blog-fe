@@ -12,14 +12,17 @@ export default class Post extends React.Component {
       markedText: ''
     };
   }
-  handlePageKeyDown (e) {
+  async handlePageKeyDown (e) {
     // ctrl + s: save article and stop default action
     if (e.keyCode === 83 && e.ctrlKey) {
       e.stopPropagation();
       e.preventDefault();
       console.log(this.title.value, this.content.value);
-      Service.post(api.saveArticle, {
+      const response = await Service.post(api.saveArticle, {
+        title: this.title.value,
+        content: this.content.value
       });
+      console.log(response);
     }
   }
   handleEditorKeyUp (e) {

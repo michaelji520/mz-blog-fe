@@ -30,7 +30,11 @@ function send(options) {
  * @param {object} params
  */
 function get(api, params) {
-  return send({ url: api, params: params || {} });
+  return send({ 
+    method: 'get', 
+    url: api, 
+    params: params || {},
+  });
 }
 
 /**
@@ -39,7 +43,14 @@ function get(api, params) {
  * @param {object} data
  */
 function post(api, data) {
-  return send({ url: api, data: data || {} });
+  return send({ 
+    method: 'post', 
+    url: api, 
+    data: data || {},
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  });
 }
 
 export default { send, get, post };
