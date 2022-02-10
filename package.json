@@ -144,7 +144,7 @@
   "devDependencies": {
     "less": "^2.7.3",
     "less-loader": "^5.0.0",
-    "node-sass": "^4.13.0"
+    "node-sass": "^7.0.0"
   },
   "proxy": "https://www.zhangji.xyz"
 }
